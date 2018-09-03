@@ -13,6 +13,7 @@
 #import "YYPthreadMutexLock2.h"
 #import "YYPthreadMutexLock3.h"
 #import "YYNSCondition.h"
+#import "YYSynchronized.h"
 
 @interface ViewController ()
 
@@ -28,7 +29,7 @@
      互斥锁: 如果资源被占用, 资源申请者就会进入休眠状态.
      */
     
-    YYNSCondition *demo = [[YYNSCondition alloc] init];
+    YYSynchronized *demo = [[YYSynchronized alloc] init];
 //    [demo moneyTest];
 //    [demo ticketTest];
     [demo otherTest];
