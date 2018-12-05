@@ -1,6 +1,9 @@
 # ThreadSafeDemo
 多线程同步方案
 
+- OSSpinLock
+- os_unfair_lock
+
 ## OSSpinLock
 
 自旋锁, 不安全, 已经被启用
@@ -57,4 +60,15 @@ _customOSSpinUnLock(&_moneyLock);
 ## os_unfair_lock
 
 用于取代不安全的OSSpinLock, 从iOS10才开始支持.
+
+```objective-c
+// 初始化
+_moneyLock = OS_UNFAIR_LOCK_INIT;
+// 加锁
+os_unfair_lock_lock(&_moneyLock);
+// 加锁的代码
+....
+// 解锁
+os_unfair_lock_unlock(&_moneyLock);
+```
 
