@@ -18,6 +18,8 @@
 		88032526213D54F9005CB30B /* YYNSConditionLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 88032525213D54F9005CB30B /* YYNSConditionLock.m */; };
 		88032529213D5525005CB30B /* YYSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 88032528213D5525005CB30B /* YYSemaphore.m */; };
 		8803252C213D555E005CB30B /* YYSynchronized.m in Sources */ = {isa = PBXBuildFile; fileRef = 8803252B213D555E005CB30B /* YYSynchronized.m */; };
+		883FF0DB213E682F0039811D /* YYFilePThreadRwlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 883FF0DA213E682F0039811D /* YYFilePThreadRwlock.m */; };
+		883FF0DE213E68440039811D /* YYFileBarrier.m in Sources */ = {isa = PBXBuildFile; fileRef = 883FF0DD213E68440039811D /* YYFileBarrier.m */; };
 		886160AC2134291C0060CCD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 886160AB2134291C0060CCD5 /* AppDelegate.m */; };
 		886160AF2134291C0060CCD5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886160AE2134291C0060CCD5 /* ViewController.m */; };
 		886160B22134291D0060CCD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 886160B02134291D0060CCD5 /* Main.storyboard */; };
@@ -49,6 +51,10 @@
 		88032528213D5525005CB30B /* YYSemaphore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYSemaphore.m; sourceTree = "<group>"; };
 		8803252A213D555E005CB30B /* YYSynchronized.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYSynchronized.h; sourceTree = "<group>"; };
 		8803252B213D555E005CB30B /* YYSynchronized.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYSynchronized.m; sourceTree = "<group>"; };
+		883FF0D9213E682F0039811D /* YYFilePThreadRwlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYFilePThreadRwlock.h; sourceTree = "<group>"; };
+		883FF0DA213E682F0039811D /* YYFilePThreadRwlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYFilePThreadRwlock.m; sourceTree = "<group>"; };
+		883FF0DC213E68440039811D /* YYFileBarrier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYFileBarrier.h; sourceTree = "<group>"; };
+		883FF0DD213E68440039811D /* YYFileBarrier.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYFileBarrier.m; sourceTree = "<group>"; };
 		886160A72134291C0060CCD5 /* ThreadSafeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThreadSafeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		886160AA2134291C0060CCD5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		886160AB2134291C0060CCD5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,6 +78,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		882B995721B7C06000F419A9 /* BaseDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8803250C213D24CC005CB30B /* YYBaseDemo.h */,
+				8803250D213D24CC005CB30B /* YYBaseDemo.m */,
+			);
+			path = BaseDemo;
+			sourceTree = "<group>";
+		};
+		882B995921B7C07C00F419A9 /* CustomLock */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomLock;
+			sourceTree = "<group>";
+		};
+		883FF0D8213E67910039811D /* FileLock */ = {
+			isa = PBXGroup;
+			children = (
+				883FF0D9213E682F0039811D /* YYFilePThreadRwlock.h */,
+				883FF0DA213E682F0039811D /* YYFilePThreadRwlock.m */,
+				883FF0DC213E68440039811D /* YYFileBarrier.h */,
+				883FF0DD213E68440039811D /* YYFileBarrier.m */,
+			);
+			path = FileLock;
+			sourceTree = "<group>";
+		};
 		8861609E2134291C0060CCD5 = {
 			isa = PBXGroup;
 			children = (
@@ -91,7 +124,10 @@
 		886160A92134291C0060CCD5 /* ThreadSafeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				883FF0D8213E67910039811D /* FileLock */,
+				882B995721B7C06000F419A9 /* BaseDemo */,
 				88EC011F213563E500CBF15B /* Lock */,
+				882B995921B7C07C00F419A9 /* CustomLock */,
 				886160AA2134291C0060CCD5 /* AppDelegate.h */,
 				886160AB2134291C0060CCD5 /* AppDelegate.m */,
 				886160AD2134291C0060CCD5 /* ViewController.h */,
@@ -108,8 +144,6 @@
 		88EC011F213563E500CBF15B /* Lock */ = {
 			isa = PBXGroup;
 			children = (
-				8803250C213D24CC005CB30B /* YYBaseDemo.h */,
-				8803250D213D24CC005CB30B /* YYBaseDemo.m */,
 				8803250F213D25E5005CB30B /* YYOSSpinLock.h */,
 				88032510213D25E5005CB30B /* YYOSSpinLock.m */,
 				88032512213D294B005CB30B /* YYOSUnfairLock.h */,
@@ -207,6 +241,7 @@
 				8803251A213D2F0E005CB30B /* YYPthreadMutexLock2.m in Sources */,
 				886160AF2134291C0060CCD5 /* ViewController.m in Sources */,
 				88032514213D294B005CB30B /* YYOSUnfairLock.m in Sources */,
+				883FF0DE213E68440039811D /* YYFileBarrier.m in Sources */,
 				8803250E213D24CC005CB30B /* YYBaseDemo.m in Sources */,
 				8803251D213D3117005CB30B /* YYPthreadMutexLock3.m in Sources */,
 				88032526213D54F9005CB30B /* YYNSConditionLock.m in Sources */,
@@ -218,6 +253,7 @@
 				88032529213D5525005CB30B /* YYSemaphore.m in Sources */,
 				88032511213D25E5005CB30B /* YYOSSpinLock.m in Sources */,
 				88032520213D3BF6005CB30B /* YYNSLock.m in Sources */,
+				883FF0DB213E682F0039811D /* YYFilePThreadRwlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -40,6 +40,40 @@
 }
 
 /**
+ 卖票演示
+ */
+- (void)ticketTest
+{
+    self.ticketsCount = 15;
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+    
+    //    for (int i = 0; i < 10; i++) {
+    //        [[[NSThread alloc] initWithTarget:self selector:@selector(__saleTicket) object:nil] start];
+    //    }
+    
+    dispatch_async(queue, ^{
+        for (int i = 0; i < 5; i++) {
+            [self __saleTicket];
+        }
+    });
+    
+    dispatch_async(queue, ^{
+        for (int i = 0; i < 5; i++) {
+            [self __saleTicket];
+        }
+    });
+    
+    dispatch_async(queue, ^{
+        for (int i = 0; i < 5; i++) {
+            [self __saleTicket];
+        }
+    });
+}
+
+#pragma mark - protocol
+
+/**
  存钱
  */
 - (void)__saveMoney
@@ -75,38 +109,6 @@
     oldTicketsCount--;
     self.ticketsCount = oldTicketsCount;
     NSLog(@"还剩%d张票 - %@", oldTicketsCount, [NSThread currentThread]);
-}
-
-/**
- 卖票演示
- */
-- (void)ticketTest
-{
-    self.ticketsCount = 15;
-    
-    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
-    
-    //    for (int i = 0; i < 10; i++) {
-    //        [[[NSThread alloc] initWithTarget:self selector:@selector(__saleTicket) object:nil] start];
-    //    }
-    
-    dispatch_async(queue, ^{
-        for (int i = 0; i < 5; i++) {
-            [self __saleTicket];
-        }
-    });
-    
-    dispatch_async(queue, ^{
-        for (int i = 0; i < 5; i++) {
-            [self __saleTicket];
-        }
-    });
-    
-    dispatch_async(queue, ^{
-        for (int i = 0; i < 5; i++) {
-            [self __saleTicket];
-        }
-    });
 }
 
 @end
