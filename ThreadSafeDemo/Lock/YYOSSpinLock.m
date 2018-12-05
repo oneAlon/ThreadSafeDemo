@@ -14,7 +14,7 @@ void _customOSSpinLock(int32_t *__lock) {
     while (*__lock != 0) {
         NSLog(@"自旋啊!!!");
     }
-    *__lock = 1;
+    *__lock = ~*__lock;
 }
 
 void _customOSSpinUnLock(int32_t *__lock) {

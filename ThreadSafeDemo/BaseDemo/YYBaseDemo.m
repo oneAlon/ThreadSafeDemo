@@ -52,6 +52,7 @@
     //        [[[NSThread alloc] initWithTarget:self selector:@selector(__saleTicket) object:nil] start];
     //    }
     
+    // 开三个窗口卖票
     dispatch_async(queue, ^{
         for (int i = 0; i < 5; i++) {
             [self __saleTicket];
