@@ -18,6 +18,7 @@
 		88032526213D54F9005CB30B /* YYNSConditionLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 88032525213D54F9005CB30B /* YYNSConditionLock.m */; };
 		88032529213D5525005CB30B /* YYSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 88032528213D5525005CB30B /* YYSemaphore.m */; };
 		8803252C213D555E005CB30B /* YYSynchronized.m in Sources */ = {isa = PBXBuildFile; fileRef = 8803252B213D555E005CB30B /* YYSynchronized.m */; };
+		882B996321B908DA00F419A9 /* YYCompareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 882B996221B908DA00F419A9 /* YYCompareViewController.m */; };
 		883FF0DB213E682F0039811D /* YYFilePThreadRwlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 883FF0DA213E682F0039811D /* YYFilePThreadRwlock.m */; };
 		883FF0DE213E68440039811D /* YYFileBarrier.m in Sources */ = {isa = PBXBuildFile; fileRef = 883FF0DD213E68440039811D /* YYFileBarrier.m */; };
 		886160AC2134291C0060CCD5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 886160AB2134291C0060CCD5 /* AppDelegate.m */; };
@@ -51,6 +52,8 @@
 		88032528213D5525005CB30B /* YYSemaphore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYSemaphore.m; sourceTree = "<group>"; };
 		8803252A213D555E005CB30B /* YYSynchronized.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYSynchronized.h; sourceTree = "<group>"; };
 		8803252B213D555E005CB30B /* YYSynchronized.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYSynchronized.m; sourceTree = "<group>"; };
+		882B996121B908DA00F419A9 /* YYCompareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCompareViewController.h; sourceTree = "<group>"; };
+		882B996221B908DA00F419A9 /* YYCompareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCompareViewController.m; sourceTree = "<group>"; };
 		883FF0D9213E682F0039811D /* YYFilePThreadRwlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYFilePThreadRwlock.h; sourceTree = "<group>"; };
 		883FF0DA213E682F0039811D /* YYFilePThreadRwlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYFilePThreadRwlock.m; sourceTree = "<group>"; };
 		883FF0DC213E68440039811D /* YYFileBarrier.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYFileBarrier.h; sourceTree = "<group>"; };
@@ -87,6 +90,15 @@
 			path = BaseDemo;
 			sourceTree = "<group>";
 		};
+		882B995D21B905FF00F419A9 /* Compare */ = {
+			isa = PBXGroup;
+			children = (
+				882B996121B908DA00F419A9 /* YYCompareViewController.h */,
+				882B996221B908DA00F419A9 /* YYCompareViewController.m */,
+			);
+			path = Compare;
+			sourceTree = "<group>";
+		};
 		883FF0D8213E67910039811D /* FileLock */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +132,7 @@
 				883FF0D8213E67910039811D /* FileLock */,
 				882B995721B7C06000F419A9 /* BaseDemo */,
 				88EC011F213563E500CBF15B /* Lock */,
+				882B995D21B905FF00F419A9 /* Compare */,
 				886160AA2134291C0060CCD5 /* AppDelegate.h */,
 				886160AB2134291C0060CCD5 /* AppDelegate.m */,
 				886160AD2134291C0060CCD5 /* ViewController.h */,
@@ -245,6 +258,7 @@
 				88032529213D5525005CB30B /* YYSemaphore.m in Sources */,
 				88032511213D25E5005CB30B /* YYOSSpinLock.m in Sources */,
 				88032520213D3BF6005CB30B /* YYNSLock.m in Sources */,
+				882B996321B908DA00F419A9 /* YYCompareViewController.m in Sources */,
 				883FF0DB213E682F0039811D /* YYFilePThreadRwlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,6 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W7M6A4ZY47;
 				INFOPLIST_FILE = ThreadSafeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -402,6 +417,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W7M6A4ZY47;
 				INFOPLIST_FILE = ThreadSafeDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

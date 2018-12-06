@@ -20,6 +20,8 @@
 #import "YYFilePThreadRwlock.h"
 #import "YYFileBarrier.h"
 
+#import "YYCompareViewController.h"
+
 @interface ViewController ()
 
 @end
