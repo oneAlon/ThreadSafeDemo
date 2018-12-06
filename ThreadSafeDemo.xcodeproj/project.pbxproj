@@ -87,13 +87,6 @@
 			path = BaseDemo;
 			sourceTree = "<group>";
 		};
-		882B995921B7C07C00F419A9 /* CustomLock */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomLock;
-			sourceTree = "<group>";
-		};
 		883FF0D8213E67910039811D /* FileLock */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,7 +120,6 @@
 				883FF0D8213E67910039811D /* FileLock */,
 				882B995721B7C06000F419A9 /* BaseDemo */,
 				88EC011F213563E500CBF15B /* Lock */,
-				882B995921B7C07C00F419A9 /* CustomLock */,
 				886160AA2134291C0060CCD5 /* AppDelegate.h */,
 				886160AB2134291C0060CCD5 /* AppDelegate.m */,
 				886160AD2134291C0060CCD5 /* ViewController.h */,

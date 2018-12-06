@@ -19,8 +19,8 @@
 @implementation YYPthreadMutexLock
 
 /*
- #define PTHREAD_MUTEX_NORMAL        0
- #define PTHREAD_MUTEX_ERRORCHECK    1
+ #define PTHREAD_MUTEX_NORMAL        0 普通锁
+ #define PTHREAD_MUTEX_ERRORCHECK    1 检查错误
  #define PTHREAD_MUTEX_RECURSIVE        2 递归锁
  #define PTHREAD_MUTEX_DEFAULT        PTHREAD_MUTEX_NORMAL
  */
@@ -33,6 +33,9 @@
 
 - (instancetype)init {
     if (self = [super init]) {
+        
+        // pthread_mutexattr_t和pthread_mutex_t都是结构体, 结构体语法
+        
         // 初始化属性
         pthread_mutexattr_init(&_attr);
         pthread_mutexattr_settype(&_attr, PTHREAD_MUTEX_NORMAL);

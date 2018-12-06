@@ -3,6 +3,7 @@
 
 - OSSpinLock
 - os_unfair_lock
+- pthread_mutex
 
 ## OSSpinLock
 
@@ -71,4 +72,42 @@ os_unfair_lock_lock(&_moneyLock);
 // 解锁
 os_unfair_lock_unlock(&_moneyLock);
 ```
+
+
+
+## pthread_mutex
+
+mutext互斥锁, 等待锁的线程会处于休眠状态
+
+```objective-c
+@property (nonatomic ,assign) pthread_mutexattr_t attr;
+@property (nonatomic ,assign) pthread_mutex_t moneyMutex;
+@property (nonatomic ,assign) pthread_mutex_t tickMutex;
+```
+
+```objective-c
+// 使用之前对锁进行一些配置
+// 初始化属性
+pthread_mutexattr_init(&_attr);
+pthread_mutexattr_settype(&_attr, PTHREAD_MUTEX_NORMAL);
+// 初始化锁
+pthread_mutex_init(&_moneyMutex, &_attr);
+pthread_mutex_init(&_tickMutex, &_attr);
+```
+
+```objective-c
+pthread_mutex_lock(&_moneyMutex);
+[super __saveMoney];
+pthread_mutex_unlock(&_moneyMutex);
+```
+
+```objc
+- (void)dealloc {
+    pthread_mutex_destroy(&_moneyMutex);
+    pthread_mutex_destroy(&_tickMutex);
+    pthread_mutexattr_destroy(&_attr);
+}
+```
+
+
 
