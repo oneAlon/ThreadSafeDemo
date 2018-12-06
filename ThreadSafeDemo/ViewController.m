@@ -15,6 +15,7 @@
 #import "YYNSCondition.h"
 #import "YYSynchronized.h"
 #import "YYNSConditionLock.h"
+#import "YYSemaphore.h"
 
 #import "YYFilePThreadRwlock.h"
 #import "YYFileBarrier.h"
@@ -37,7 +38,7 @@
 
 - (IBAction)lockDemo:(id)sender {
     
-    YYBaseDemo *demo = [[YYNSConditionLock alloc] init];
+    YYBaseDemo *demo = [[YYSemaphore alloc] init];
 //    [demo moneyTest];
     //    [demo ticketTest];
     [demo otherTest];

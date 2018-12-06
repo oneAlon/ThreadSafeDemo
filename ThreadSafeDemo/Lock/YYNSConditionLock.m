@@ -8,6 +8,13 @@
 
 #import "YYNSConditionLock.h"
 
+/*
+ 使用场景:
+    比如三个子线程在执行耗时任务(使用GCD开启的异步子线程),
+    如果想按照线程1->线程2->线程3的执行顺序
+    可以使用NSConditionLock来设置线程之间的依赖.
+ */
+
 @interface YYNSConditionLock()
 
 @property (nonatomic ,strong) NSConditionLock *condition;
