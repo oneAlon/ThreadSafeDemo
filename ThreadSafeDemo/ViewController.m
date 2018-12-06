@@ -14,6 +14,7 @@
 #import "YYPthreadMutexLock3.h"
 #import "YYNSCondition.h"
 #import "YYSynchronized.h"
+#import "YYNSConditionLock.h"
 
 #import "YYFilePThreadRwlock.h"
 #import "YYFileBarrier.h"
@@ -36,7 +37,7 @@
 
 - (IBAction)lockDemo:(id)sender {
     
-    YYBaseDemo *demo = [[YYPthreadMutexLock3 alloc] init];
+    YYBaseDemo *demo = [[YYNSConditionLock alloc] init];
 //    [demo moneyTest];
     //    [demo ticketTest];
     [demo otherTest];
