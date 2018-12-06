@@ -36,10 +36,10 @@
 
 - (IBAction)lockDemo:(id)sender {
     
-    YYOSSpinLock *demo = [[YYOSSpinLock alloc] init];
-    [demo moneyTest];
+    YYBaseDemo *demo = [[YYPthreadMutexLock3 alloc] init];
+//    [demo moneyTest];
     //    [demo ticketTest];
-//    [demo otherTest];
+    [demo otherTest];
     
 }
 
