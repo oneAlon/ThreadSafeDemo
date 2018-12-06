@@ -1,7 +1,7 @@
 # ThreadSafeDemo
 ## 多线程同步方案
 
-- OSSpinLock自旋锁, 已经弃用
+- OSSpinLock自旋锁, 存在优先级翻转的问题, 已经弃用
 - os_unfair_lock, iOS10开始支持
 - pthread_mutex
   - pthread_mutex普通锁
@@ -15,6 +15,20 @@
 
 - dispatch_semaphore信号量, 通过控制线程的最大并发数量, 保证线程同步
 - synchronized
+
+
+
+## 性能对比
+
+
+
+
+
+推荐使用:
+
+- dispatch_semaphore
+
+- pthread_mutex
 
 
 
